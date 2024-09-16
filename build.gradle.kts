@@ -18,12 +18,10 @@ buildscript {
 }
 
 allprojects {
-
-	dependencyResolutionManagement {
-		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-		repositories {
+    repositories {
+            google()
 			mavenCentral()
-			maven { url 'https://jitpack.io' }
+			maven { url "https://jitpack.io" }
 		}
 	}
 }
@@ -95,10 +93,10 @@ task<Delete>("clean") {
     delete(rootProject.buildDir)
 }
 
-	dependencyResolutionManagement {
-		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-		repositories {
-			mavenCentral()
-			maven { url 'https://jitpack.io' }
-		}
+dependencyResolutionManagement {
+	repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+	repositories {
+		mavenCentral()
+		maven { url 'https://jitpack.io' }
 	}
+}
